@@ -1,3 +1,5 @@
+{{ config(tags=["exam_done_tag"]) }}
+
 with dimspectrack as (
     select * from {{ source('Exam_STAR_DBT','DIMSPECTRACK')}}
 ),
