@@ -6,7 +6,7 @@ name: 'demo_dbt'
 version: '1.0.0'
 
 # This setting configures which "profile" dbt uses for this project.
-profile: 'exam_dbt'
+profile: 'demo_dbt'
 
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
@@ -35,5 +35,9 @@ models:
     example:
       +materialized: view
       +tags:
-          - exam_table_tag
-          - exam_done_tag
+          - exam_tag
+vars:
+    countries: ["France", "Spain", "Germany", "United States"]
+
+on-run-start: "{{ auto_test(5) }}"
+on-run-end: "{{ auto_test(6) }}"

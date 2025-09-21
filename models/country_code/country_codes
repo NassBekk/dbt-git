@@ -1,3 +1,5 @@
+{{ config(materialized='table', tags=['bob_tag']) }}
+
 with demographics as (
     select * from {{ source('COVID19_Epidemiological_Data', 'DEMOGRAPHICS') }}
 ),
