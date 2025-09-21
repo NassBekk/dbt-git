@@ -36,3 +36,5 @@ models:
       +materialized: view
 vars:
     countries: ["France", "Spain", "Germany", "United States"]
+
+on-run-end: "insert into DEMO.PUBLIC.MY_FIRST_DBT_MODEL values(3)"
