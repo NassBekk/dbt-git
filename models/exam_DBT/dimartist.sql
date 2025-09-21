@@ -7,7 +7,7 @@ with artist as (
 final as (
     select  artistId as Artist_key,
             name as Name,
-            birthyear as prod_year,
+            birthyear as birthyear,
             country as Country
     from artist
 )
