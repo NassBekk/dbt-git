@@ -1,0 +1,35 @@
+version: 2
+
+sources:
+    - name: Exam_DBT
+      description: 'connexion a la base de l examen'
+      database: DBT_EXAM_DB
+      schema: MUSIC
+      tables:
+        - name: ALBUM
+          description: 'les infos sur les albums'
+        - name: ARTIST
+          description: 'les infos sur les artists'
+        - name: GENRE
+          description: 'la liste des genres de musiques'
+        - name: MEDIATYPE
+          description: 'la liste des differents formats'
+        - name: PLAYLIST
+          description: 'la listes des diffrentes playlist'
+        - name: TRACK
+          description: 'les infos sur les morceaux'
+        - name: PLAYLISTTRACK
+          description: 'table de liaison entre la table PALYLIST ET TRACK'
+    - name: Exam_STAR_DBT
+      description: 'table en etoile'
+      database: DBT_EXAM_DB
+      schema: STAR_MUSIC
+      tables:
+        - name: DIMALBUM
+          description: 'dimension albums'
+        - name: DIMARTIST
+          description: 'dimension artists'
+        - name: FACTTRACKS
+          description: 'table de faits'
+        - name: DIMSPECTRACK
+          description: 'dimension morceaux'
